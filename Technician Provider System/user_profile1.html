@@ -1,0 +1,75 @@
+<?php
+session_start();
+
+?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name ="viewport" content=" width= device-width">
+    <title>EZ Life Project  | Welcome </title>
+    <link rel="stylesheet" href ="./css/style.css">
+
+  </head>
+  <body>
+    <header>
+      <div class ="container">
+        <div id ="branding ">
+          <h1><span class="highlight">EZ </span> Life Project</h1>
+          </div>
+          <nav id ="navigation">
+            <ul>
+              <li> <a href="user_home.php">Home </a> </li>
+              <li><a href="services.php">Services</li>
+              <li  class="current"><a href="user_profile.php">Profile</li>
+              <li> <a href= "logout.php">Log Out </a> </li>
+              <li> <a href= "user_about.php">About</a> </li>
+            </ul>
+          </nav>
+          </div>
+    </header>
+    <div class="wrapper">
+      <div class="left">
+        <img src="./img/user.png" height="200px" width="200px">
+         <h4> <?php echo $_SESSION["name"]; ?> </h4>
+         <h5> <?php echo $_SESSION["nid"]; ?> </h5>
+      </div>
+
+      <div class="right">
+            <div class="info">
+              <div class="data">
+                <h4>Email</h4>
+                <h5> <?php echo $_SESSION["email"];?> </h5>
+              </div>
+
+              <div class="data">
+                <h4>Phone</h4>
+                <h5> <?php echo $_SESSION["phone"]; ?> </h5>
+              </div>
+
+              <div class="data">
+                <h4>Address</h4>
+                <h5> <?php echo $_SESSION["add"]; ?> </h5>
+              </div>
+
+              <div class="data">
+                <h4>Currently Employing </h4>
+              </div>
+              <div>
+                <h4> <?php echo $_SESSION["working"];?><button class="button_2" onclick="">Dismiss</button></td></h4>
+
+
+              </div>
+
+
+              <div class="data">
+                <h4>Previously Worked With</h4>
+              </div>
+              <div class=>
+                <h4> <?php echo $_SESSION["worked"];?> </h4>
+              </div>
+            </div>
+      </div>
+</div>
+    </body>
+</html>
